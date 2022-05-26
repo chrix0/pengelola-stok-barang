@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+
+.darkenPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.darken {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.lighten {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.drawer {
+  width: 400px;
+  height: 100%;
+  background-color: lightslategrey;
+  position: absolute;
+  left: -25%;
+  padding: 4vh;
+  z-index: 2;
+}
+
+#toggleDrawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.open {
+  left: 0vw;
+}
+
+.drawer .drawer_content {
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+}
+
+#profile_name {
+  font-size: 20px;
+  text-align: center;
+  white-space: pre-line; /*terima new line kalau tombol enter*/
+  font-weight: bold;
+}
+
+#profile_occupation {
+  font-size: 10px;
+  text-align: center;
+  white-space: pre-line; /*terima new line kalau tombol enter*/
+}
+.drawer_profile {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: lightsteelblue;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  position: sticky;
+  margin-bottom: 20px;
+  top: 0;
+}
+
+.drawer_menu {
+  width: 100%;
+}
+
+.drawer_menuItem {
+  width: 100%;
+  height: 40px;
+  background-color: steelblue;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0);
+}
+
+.drawer_menuItem .drawer_menuItem_icon {
+  margin-right: 10px;
+}
+
+.drawer_menuItem:hover {
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.drawer_menuItemList {
+  list-style-type: none;
+  overflow: auto;
+  padding: 0;
+}
+
+.removeTextDecoration {
+  text-decoration: none;
+  font-weight: bold;
+  color: lightgray;
+}
+
+.removeTextDecoration:hover {
+  color: white;
+}
+
+.slideAnim {
+  animation: slide 0.15s ease-out 0s 1 normal forwards;
+}
+
+.slideAnimReverse {
+  animation: slide 0.15s ease-out 0s 1 reverse forwards;
+}
+
+@keyframes slide {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 0px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 10px 10px grey;
+  }
+}

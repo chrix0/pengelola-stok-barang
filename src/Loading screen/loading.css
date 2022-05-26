@@ -1,0 +1,127 @@
+.loading {
+  width: 95%;
+  height: 90%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 0;
+}
+
+.loadmain {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  transition: all 1.5s;
+  align-items: column;
+  justify-content: center;
+}
+
+.loadload {
+  width: 100px;
+  height: 100px;
+  border: 0px;
+  border-top: 2px solid grey;
+  border-right: 2px solid grey;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  animation: Xspin 20s ease infinite;
+  transition: border-color 1.5s;
+}
+
+.loadcontainer {
+  border: 2px solid grey;
+  /*
+	border-top:2px solid white;
+	border-right:2px solid white;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;*/
+  animation: spin 15s ease infinite;
+  width: 40px;
+  height: 40px;
+  transition: border-color 1.5s;
+}
+
+.box {
+  width: 25px;
+  height: 25px;
+  background-color: cyan;
+  animation: spin 5s cubic-bezier(0.32, 0, 0.07, 1) infinite;
+  transition: 1.5s;
+}
+
+.hvcenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.hcenter {
+  margin: auto;
+  text-align: center;
+}
+
+/*
+.hvcenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+*/
+
+.box:hover {
+  transform-origin: center;
+  background-color: orange;
+  border-radius: 100px;
+  transition: 1s;
+}
+
+.msg {
+  margin-top: 400px;
+  color: white;
+  opacity: 15%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes Xspin {
+  0% {
+    transform: rotateZ(-0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+/*Vue.js fade anim*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

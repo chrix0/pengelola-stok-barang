@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.welcome {
+  width: 100vw;
+  height: 100vh;
+}
