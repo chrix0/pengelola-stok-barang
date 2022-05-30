@@ -18,19 +18,60 @@ class Main extends Component {
 
         //Elemen React perlu disimpan di dalam suatu anonymous function.. 
         this.state = {
+            //!!!!!!!!Kalau mau tes design, import componentnya dulu di atas!!!!!!!!!!!.
+            //Lalu tambah elemen array di dalam menuList
+            //ikut pola ini :
+            //[path, url ikon, judul menu item, komponen yang akan dimunculkan]
+            //utk bagian komponen pastikan menggunakan anon function. Tambahkan juga atribut ini, copas aja transitionVar={this.state.trasitionVariant} transition={this.state.transition}
             menuList: [
                 ["/", "https://img.icons8.com/office/30/000000/cloud.png", "Welcome!", () => { return (<Welcome transitionVar={this.state.trasitionVariant} transition={this.state.transition} />) }],
                 ["/currency", "https://img.icons8.com/office/30/000000/cloud.png", "Currency Convert", () => { return (<CurrencyExchange transitionVar={this.state.trasitionVariant} transition={this.state.transition} />) }],
-                ["/loadtest", "https://img.icons8.com/office/30/000000/cloud.png", "Loading screen animation", () => { return (<Loader />) }],
+                ["/loadtest", "https://img.icons8.com/office/30/000000/cloud.png", "Loading screen animation", () => { return (<Loader />) }]
             ],
-            trasitionVariant: props.transitionVar,
-            transition: props.transition
+            //Kalau udah ditambah, reload webnya, klik menu item yg udh ditambah
+            //jangan lupa hapus elemen menuList yang sudah dites tadi agar code tidak berantakkan x
+
+            trasitionVariant: props.transitionVar, //tidak perlu diubah
+            transition: props.transition, //tidak perlu diubah
+            currentRole: props.role //ubah sesuai dgn role akun yang sedang login
         }
-        //axios-progress-bar digunakan untuk menampilkan progress bar saat proses request dari server
-        loadProgressBar(); //Hanya dipanggil sekali saja, sudah mencakup semua request.
+        loadProgressBar(); 
+    }
+
+    componentWillMount(){
+        this.setMenuList(this.state.currentRole)
+    }
+
+    setMenuList(role){
+        //Tiap role memiliki menu yang berbeda
+        //Contoh penambahannya ada di dalam menuList dalam this.state di atas
+        //[path, url ikon, judul menu item, komponen yang akan dimunculkan]
+        //utk bagian komponen pastikan menggunakan anon function
+        if(role === "pemilik"){
+            this.setState({
+                menuList: [
+
+                ]
+            })
+        }
+        else if (role === "supplier"){
+            this.setState({
+                menuList: [
+                    
+                ]
+            })
+        }
+        else if (role === "gudang"){
+            this.setState({
+                menuList: [
+                    
+                ]
+            })
+        }
     }
 
     render() {
+        //Ini penjelasan dari copilot. Iseng, tp mungkin berguna 
         //HashRouter is used to make the page refresh when the user navigates to a different page
         //NavLink is used to make the page refresh when the user clicks on a menu item
         //Route is used to make the page refresh when the user clicks on a menu item

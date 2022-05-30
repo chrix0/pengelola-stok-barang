@@ -26,8 +26,10 @@ class Welcome extends Component {
 
                 <h1 className="text">👋</h1>
                 <h1 className="text">Hello!</h1>
-                <h3 className="text">Check out my project list by clicking the menu button.</h3>
-                <h3 className="text">Enjoy!</h3>
+                <h3 className="text">Cek cara pengerjaannya di template.js di dlm folder TEMPLATE</h3>
+                <h3 className="text">Usahakan bagian yg udh dipilih disiapkan dalam 1 minggu.</h3>
+                <h3 className="text">Minggu depan tolong kerjakan tampilan sisanya.</h3>
+                <h3 className="text">Thank you!</h3>
             </motion.div>
         )
     }

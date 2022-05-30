@@ -8,5 +8,5 @@ import Main from './Main';
 import './DrawerNav/DrawerNav.css';
 import { transitionVariants, transition } from './settings'
 
-ReactDOM.render(<Main transitionVar={transitionVariants} transition={transition} />, document.getElementById('root'));
+ReactDOM.render(<Main role="test" transitionVar={transitionVariants} transition={transition} />, document.getElementById('root'));
 

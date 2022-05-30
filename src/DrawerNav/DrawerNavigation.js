@@ -58,12 +58,10 @@ class DrawerNavigation extends Component {
 
                         <div className="drawer_profile">
                             <h1 id="profile_name">
-                                Chris Tianto Pratama
+                                Nama User di sini
                             </h1>
                             <h2 id="profile_occupation">
-                                Frontend Developer / UI/UX Designer / Freelancer
-                                (Bachelor of Computer Science)
-                                {"\n"}- Github copilot sepertinya memuji me
+                                Role User di sini
                             </h2>
                         </div>
 
