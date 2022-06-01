@@ -1,0 +1,37 @@
+.container-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.wrapper-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.thin {
+    font-weight: 100;
+
+}
+
+.text-right{
+    text-align: right;
+    
+}
+.w-full{
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+.bold1{
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: x-large;
+    width: 40%;
+}

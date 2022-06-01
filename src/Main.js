@@ -6,10 +6,23 @@ import BG from "./Background/bg";
 import Welcome from "./0. Welcome Screen/welcome";
 import CurrencyExchange from "./1. CurrencyExchange/CurrencyExchange";
 import Loader from "./Loading screen/loading";
+import Login from "./login/login";
+import Lupapassword from "./Lupa Password/Lupapassword";
+import Formpengiriman from "./Form Pengiriman Barang/Formpengiriman";
+import Formpermintaan from "./Form Permintaan Barang/Formpermintaan";
+import InformasiBarang from "./Informasi Barang/InformasiBarang";
 import { AnimatePresence } from 'framer-motion'
 //for axios-progress-bar
 import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css'
+import Formpembatalan from "./Form Pembatalan Barang/Formpembatalan";
+import InformasiPerubahaan from "./Informasi Perubahan Stok/InformasiPerubahan";
+import DaftarPemesanan from "./Daftar Pemesanan Barang/Daftarpemesanan";
+import DaftarPembatalan from "./Daftar Pembatalan Pesanan/DaftarPembatalan";
+import DaftarPermintaan from "./Daftar Permintaan Pengembalian/DaftarPermintaaan";
+import DaftarGudang from "./Daftar Pemesanan Barang dari Gudang/DaftarGudang";
+
+
 
 class Main extends Component {
 
@@ -26,7 +39,19 @@ class Main extends Component {
             menuList: [
                 ["/", "https://img.icons8.com/office/30/000000/cloud.png", "Welcome!", () => { return (<Welcome transitionVar={this.state.trasitionVariant} transition={this.state.transition} />) }],
                 ["/currency", "https://img.icons8.com/office/30/000000/cloud.png", "Currency Convert", () => { return (<CurrencyExchange transitionVar={this.state.trasitionVariant} transition={this.state.transition} />) }],
-                ["/loadtest", "https://img.icons8.com/office/30/000000/cloud.png", "Loading screen animation", () => { return (<Loader />) }]
+                ["/loadtest", "https://img.icons8.com/office/30/000000/cloud.png", "Loading screen animation", () => { return (<Loader />) }],
+                ["/login", "https://img.icons8.com/office/30/000000/cloud.png", "Login",() => <Login/>],
+                ["/lupapassword", "https://img.icons8.com/office/30/000000/cloud.png", "Lupa Password",() => <Lupapassword/>],
+                ["/formpengiriman", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pengiriman Barang",() => <Formpengiriman/>],
+                ["/formpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Permintaan Barang",() => <Formpermintaan/>],
+                ["/formpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pembatalan Barang",() => <Formpembatalan/>],
+                ["/informasibarang", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Barang",() => <InformasiBarang/>],
+                ["/informasiperubahan", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Perubahan Stok",() => <InformasiPerubahaan/>],
+                ["/daftarpemesanan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang",() => <DaftarPemesanan/>],
+                ["/daftarpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pembatalan Pesanan",() => <DaftarPembatalan/>],
+                ["/daftarpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Permintaan Pengembalian",() => <DaftarPermintaan/>],
+                ["/daftargudang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang dari Gudang",() => <DaftarGudang/>]
+
             ],
             //Kalau udah ditambah, reload webnya, klik menu item yg udh ditambah
             //jangan lupa hapus elemen menuList yang sudah dites tadi agar code tidak berantakkan x

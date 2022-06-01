@@ -1,0 +1,43 @@
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.bold {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.check2{
+    margin-left: 20%;
+}
+.select{
+    padding: 4px;
+}
+.w-full{
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+.bold1{
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: x-large;
+    width: 40%;
+}
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+
+}
+.input-id{
+    padding-left: 10px;
+
+}
