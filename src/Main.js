@@ -21,6 +21,7 @@ import DaftarPemesanan from "./Daftar Pemesanan Barang/Daftarpemesanan";
 import DaftarPembatalan from "./Daftar Pembatalan Pesanan/DaftarPembatalan";
 import DaftarPermintaan from "./Daftar Permintaan Pengembalian/DaftarPermintaaan";
 import DaftarGudang from "./Daftar Pemesanan Barang dari Gudang/DaftarGudang";
+import Penggunabaru from "./Pengguna Baru/penggunaBaru";
 
 
 
@@ -50,7 +51,8 @@ class Main extends Component {
                 ["/daftarpemesanan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang",() => <DaftarPemesanan/>],
                 ["/daftarpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pembatalan Pesanan",() => <DaftarPembatalan/>],
                 ["/daftarpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Permintaan Pengembalian",() => <DaftarPermintaan/>],
-                ["/daftargudang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang dari Gudang",() => <DaftarGudang/>]
+                ["/daftargudang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang dari Gudang",() => <DaftarGudang/>],
+                ["/tambahpenggunabaru", "https://img.icons8.com/office/30/000000/cloud.png", "Tambah Pengguna Baru",() => <Penggunabaru/>]
 
             ],
             //Kalau udah ditambah, reload webnya, klik menu item yg udh ditambah
