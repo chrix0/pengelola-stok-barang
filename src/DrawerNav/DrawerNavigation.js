@@ -68,11 +68,24 @@ class DrawerNavigation extends Component {
                         <div className="drawer_menu">
                             <ul className="drawer_menuItemList">
                                 {this.state.menuList.map((item, index) => {
-                                    return (
-                                        <li key={index}>
-                                            <MenuItem linkTo={item[0]} iconURL={item[1]} text={item[2]} toggleDrawer={this.toggleDrawer} />
+                                    if (Array.isArray(item[1])) {
+                                        return <li className="dropdown">
+                                            <MenuItem linkTo={"#"} iconURL={item[2]} text={item[0]} toggleDrawer={this.toggleDrawer} />
+                                            <ul className="dropdown-list">
+                                                {
+                                                    item[1].map((item, index) => {
+                                                        return <li key={index}><MenuItem linkTo={item[0]} iconURL={item[1]} text={item[2]} toggleDrawer={this.toggleDrawer} /></li>        
+                                                    })
+                                                }
+                                            </ul>
                                         </li>
-                                    )
+                                    } else {
+                                        return (
+                                            <li key={index}>
+                                                <MenuItem linkTo={item[0]} iconURL={item[1]} text={item[2]} toggleDrawer={this.toggleDrawer} />
+                                            </li>
+                                        )
+                                    }
                                 }
                                 )}
                             </ul>

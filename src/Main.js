@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, HashRouter, Routes, useLocation } from "react-router-dom";
+import { Route, HashRouter, Routes, useLocation, useHref } from "react-router-dom";
 import './index.css'
 import DrawerNavigation from "./DrawerNav/DrawerNavigation";
 import BG from "./Background/bg";
@@ -23,6 +23,7 @@ import DaftarPermintaan from "./Daftar Permintaan Pengembalian/DaftarPermintaaan
 import DaftarGudang from "./Daftar Pemesanan Barang dari Gudang/DaftarGudang";
 import Penggunabaru from "./Pengguna Baru/penggunaBaru";
 import Ubahdata from "./Ubah Hapus Data/Ubahdata";
+import Daftarpermintaan from "./Daftar Permintaan Barang/Daftarpermintaan";
 
 
 class Main extends Component {
@@ -44,16 +45,30 @@ class Main extends Component {
                 ["/login", "https://img.icons8.com/office/30/000000/cloud.png", "Login",() => <Login/>],
                 ["/lupapassword", "https://img.icons8.com/office/30/000000/cloud.png", "Lupa Password",() => <Lupapassword/>],
                 ["/formpengiriman", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pengiriman Barang",() => <Formpengiriman/>],
-                ["/formpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Permintaan Barang",() => <Formpermintaan/>],
+                
                 ["/formpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pembatalan Barang",() => <Formpembatalan/>],
-                ["/informasibarang", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Barang",() => <InformasiBarang/>],
+                
                 ["/informasiperubahan", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Perubahan Stok",() => <InformasiPerubahaan/>],
-                ["/daftarpemesanan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang",() => <DaftarPemesanan/>],
-                ["/daftarpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pembatalan Pesanan",() => <DaftarPembatalan/>],
-                ["/daftarpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Permintaan Pengembalian",() => <DaftarPermintaan/>],
-                ["/daftargudang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang dari Gudang",() => <DaftarGudang/>],
+                [
+                    "Informasi Gudang ",
+                    [
+                        ["/informasibarang", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Barang",() => <InformasiBarang/>],
+                        ["/informasiperubahan", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Perubahan Stok",() => <InformasiPerubahaan/>],
+                    ],
+                    "https://img.icons8.com/office/30/000000/cloud.png"
+                ],
+                [
+                    "Permintaan Barang ",
+                    [
+                        ["/formpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Permintaan Barang",() => <Formpermintaan/>],
+                        ["/daftarpemesanan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan barang",() => <DaftarPemesanan/>],
+                    ],
+                    "https://img.icons8.com/office/30/000000/cloud.png"
+                ],
+                
                 ["/tambahpenggunabaru", "https://img.icons8.com/office/30/000000/cloud.png", "Tambah Pengguna Baru",() => <Penggunabaru/>],
-                ["/ubahhapusdata", "https://img.icons8.com/office/30/000000/cloud.png", "Ubah Hapus Data Pengguna",() => <Ubahdata/>]
+                ["/ubahhapusdata", "https://img.icons8.com/office/30/000000/cloud.png", "Ubah Hapus Data Pengguna",() => <Ubahdata/>],
+                ["/daftarpermintaanbarang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Permintaan Barang",() => <Daftarpermintaan/>]
                 
             ],
             //Kalau udah ditambah, reload webnya, klik menu item yg udh ditambah
@@ -140,11 +155,16 @@ class Main extends Component {
                                 <Routes location={useThis.location} key={useThis.pathname}>
                                     {
                                         this.state.menuList.map((item, index) => {
-                                            return (
-                                                <Route key={index} path={item[0]} element={item[3]()} />
-                                            )
-                                        }
-                                        )
+                                            if (Array.isArray(item[1])) {
+                                                return item[1].map((item, index) => {
+                                                    return <Route key={index} path={item[0]} element={item[3]()} />
+                                                })
+                                            } else {
+                                                return (
+                                                    <Route key={index} path={item[0]} element={item[3]()} />
+                                                )
+                                            }
+                                        })
                                     }
                                 </Routes>
                             </div>

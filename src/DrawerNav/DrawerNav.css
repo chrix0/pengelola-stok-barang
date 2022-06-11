@@ -136,3 +136,11 @@ body {
     box-shadow: 10px 10px grey;
   }
 }
+
+.dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list {
+  display: none;
+}
