@@ -52,7 +52,52 @@ class Formpengiriman extends Component {
 
                     <div className="container-input">
                         <span className="text4">Detail Pesanan Barang</span>
-                        <input className="input-id" placeholder="Tabel detail pesanan"></input>
+                        <table  style={{width:"100%", border:"1px solid #fff" ,color:"white"}}>
+                        <tr>
+                            <th>
+                                Nama Barang
+                            </th>
+                            <th>
+                                Stok Barang
+                            </th>
+                            <th>
+                                ID Barang
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                rokok
+                            </td>
+                            <td>
+                                10
+                            </td>
+                            <td>
+                                10000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                rokok
+                            </td>
+                            <td>
+                                10
+                            </td>
+                            <td>
+                                10000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                rokok
+                            </td>
+                            <td>
+                                10
+                            </td>
+                            <td>
+                                10000
+                            </td>
+                        </tr>
+                        </table>
                     </div>
 
                     <div className="container-input">

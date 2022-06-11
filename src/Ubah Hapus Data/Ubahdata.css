@@ -1,0 +1,29 @@
+.saring-data{
+    text-align: right;
+}
+.input-nama{
+    width: 94%;
+}
+
+.frans{
+    color: white;
+}
+
+table, tr, td {
+    border: none;
+    color:white;
+}
+.bold2{
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: x-large;
+    width: 40%;
+    float: right;
+}
+.bold3{
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: x-large;
+    width: 40%;
+    
+}

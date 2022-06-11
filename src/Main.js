@@ -22,7 +22,7 @@ import DaftarPembatalan from "./Daftar Pembatalan Pesanan/DaftarPembatalan";
 import DaftarPermintaan from "./Daftar Permintaan Pengembalian/DaftarPermintaaan";
 import DaftarGudang from "./Daftar Pemesanan Barang dari Gudang/DaftarGudang";
 import Penggunabaru from "./Pengguna Baru/penggunaBaru";
-
+import Ubahdata from "./Ubah Hapus Data/Ubahdata";
 
 
 class Main extends Component {
@@ -52,8 +52,9 @@ class Main extends Component {
                 ["/daftarpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pembatalan Pesanan",() => <DaftarPembatalan/>],
                 ["/daftarpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Permintaan Pengembalian",() => <DaftarPermintaan/>],
                 ["/daftargudang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemesanan Barang dari Gudang",() => <DaftarGudang/>],
-                ["/tambahpenggunabaru", "https://img.icons8.com/office/30/000000/cloud.png", "Tambah Pengguna Baru",() => <Penggunabaru/>]
-
+                ["/tambahpenggunabaru", "https://img.icons8.com/office/30/000000/cloud.png", "Tambah Pengguna Baru",() => <Penggunabaru/>],
+                ["/ubahhapusdata", "https://img.icons8.com/office/30/000000/cloud.png", "Ubah Hapus Data Pengguna",() => <Ubahdata/>]
+                
             ],
             //Kalau udah ditambah, reload webnya, klik menu item yg udh ditambah
             //jangan lupa hapus elemen menuList yang sudah dites tadi agar code tidak berantakkan x

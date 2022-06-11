@@ -92,6 +92,13 @@ class DaftarGudang extends Component {
                     </div>
                     </div>
                     <div className="container-input">
+                        <span>
+                            <input className="input-id" placeholder="Cari Barang Berdasarkan ID"></input>
+                            <FaSearch className="icon1"/>
+                            <AiOutlineSortAscending className="icon2"/>
+                        </span>  
+                    </div>
+                    <div className="container-input">
                         <span >Daftar Barang Dari  Permintaan</span>
                         <div className="container-input">
                         <table  style={{width:"100%", border:"1px solid #fff" ,color:"white"}}>
