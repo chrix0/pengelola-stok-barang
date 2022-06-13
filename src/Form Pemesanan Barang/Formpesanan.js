@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import { motion } from 'framer-motion'
-import './Formpermintaan.css'
+import './Formpesanan.css'
 import { FaSearch } from 'react-icons/fa'
-import ListBarang from "./components/listBarang";
+import ListPemesanan from "./componen/listPemesanan";
 
 //Ubah nama class dengan nama file js. Jangan buat nama class yg sama dgn yg udh ada.
-class Formpermintaan extends Component {
+class Formpesanan extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             search: "",
             selectedRow: 0,
-            listBarang: [
+            ListPemesanan: [
                 {
                     id: 1,
                     name: "Sabun",
@@ -59,7 +59,7 @@ class Formpermintaan extends Component {
                 variants={this.props.transitionVar}
                 className='center wrapper-container'
             >
-                <h1 className="bold">Form Permintaan Barang</h1>
+                <h1 className="bold">Form Pemesanan Barang</h1>
                 <div className="w-50">
 
                     <div className="container-input">
@@ -94,7 +94,7 @@ class Formpermintaan extends Component {
                             </thead>
                             <tbody id="dataBarang">
                                 {
-                                    this.state.listBarang.map((item) => {
+                                    this.state.ListPemesanan.map((item) => {
                                         if (item.name.toLowerCase().includes(this.state.search))
                                             return <tr onClick={(e) => this.selectTable(e)}>
                                                 <td className="text-center">{item.id}</td>
@@ -112,9 +112,9 @@ class Formpermintaan extends Component {
                     <div className="container-input">
                         <span className="text4">List Barang</span>
                         <ul className="w-full pl-5">
-                            <ListBarang namaBarang="" />
-                            <ListBarang namaBarang="" />
-                            <ListBarang namaBarang="" />
+                            <ListPemesanan namaBarang="" />
+                            <ListPemesanan namaBarang="" />
+                            <ListPemesanan namaBarang="" />
                         </ul>
                     </div>
                     <div className="text-right ">
@@ -129,4 +129,4 @@ class Formpermintaan extends Component {
 }
 
 //Jangan lupa diexport classnya !!
-export default Formpermintaan;
+export default Formpesanan;

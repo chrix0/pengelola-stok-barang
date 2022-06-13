@@ -32,23 +32,26 @@ class Lupapassword extends Component {
                <div className="w-50">
                     <div className="container-input">
                         <span className="text4">ID Karyawan</span>
-                        <input className="input-id" placeholder="ID Karyawan"></input>
+                        <input className="" placeholder="ID Karyawan"></input>
                     </div>
                     <div className="container-input">
-                        <span className="prosedur">Prosedur : </span>
-                            <ul>
-                                <li>
-                                        ID Karyawan akan dikirimkan ke pemilik perusahaan
-                                </li>
-                                <li>
-                                        Password baru akan diinformasikan pemilik via Whatsapp
-                                </li>
-                            </ul>
+                        <span className="text4">OTP</span>
+                        <span>
+                            <input className="input" placeholder="Nomor OTP"></input>
+                            <button className="bold5">Kirim OTP Ke nomor Telepon Terkait</button>
+                        </span>
+                    </div>
+
+                    <div className="container-input">
+                        <span className="text4">Password Baru</span>
+                        <input  type="password" className=""   placeholder="Password Baru"></input>   
+                    </div>
+
+                    <div className="text-right ">
+                        <button className="bold1">Ubah Password</button>
                     </div>
                     
-                    <div className="text-right ">
-                        <button className="bold1">Kirim</button>
-                    </div>
+                    
                 </div>  
 
             </motion.div>

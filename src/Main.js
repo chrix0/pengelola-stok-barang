@@ -24,6 +24,16 @@ import DaftarGudang from "./Daftar Pemesanan Barang dari Gudang/DaftarGudang";
 import Penggunabaru from "./Pengguna Baru/penggunaBaru";
 import Ubahdata from "./Ubah Hapus Data/Ubahdata";
 import Daftarpermintaan from "./Daftar Permintaan Barang/Daftarpermintaan";
+import Pemilikbarang from "./Daftar Pemilik/Pemilikbarang";
+import Pemilikinformasi from "./Informasi Pemilik/Pemilikinformasi";
+import Pembatalanpemilik from "./Daftar Pembatalan Pemilik/Pembatalanpemilik";
+import Pengeluaranpemilik from "./Form Pengeluaran Barang/Pengeluaranpemilik";
+import Formpesanan from "./Form Pemesanan Barang/Formpesanan";
+import Formpengembalian from "./Form Pengembalian Barang/Formpengembalian";
+import Formpenambahan from "./Form Penambahan/Formpenambahan";
+import Daftarbarang from "./Daftar Barang Keluar/Daftarbarang";
+import Daftarmasuk from "./Daftar Barang Masuk/Daftarmasuk";
+import Daftarpengembalian from "./Daftar Pengembalian Barang/Daftarpengembalian";
 
 
 class Main extends Component {
@@ -44,11 +54,20 @@ class Main extends Component {
                 ["/loadtest", "https://img.icons8.com/office/30/000000/cloud.png", "Loading screen animation", () => { return (<Loader />) }],
                 ["/login", "https://img.icons8.com/office/30/000000/cloud.png", "Login",() => <Login/>],
                 ["/lupapassword", "https://img.icons8.com/office/30/000000/cloud.png", "Lupa Password",() => <Lupapassword/>],
-                ["/formpengiriman", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pengiriman Barang",() => <Formpengiriman/>],
-                
-                ["/formpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pembatalan Barang",() => <Formpembatalan/>],
-                
+                ["/formpengiriman", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pengiriman Barang",() => <Formpengiriman/>],      
                 ["/informasiperubahan", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Perubahan Stok",() => <InformasiPerubahaan/>],
+                ["/daftarpermintaanbarang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Permintaan Barang",() => <Daftarpermintaan/>],
+                ["/daftarpemilik", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pemilik",() => <Pemilikbarang/>],
+                ["/informasipemilik", "https://img.icons8.com/office/30/000000/cloud.png", "Informasi Pemilik",() => <Pemilikinformasi/>],
+                ["/daftarpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pembatalan Permintaan",() => <Pembatalanpemilik/>],
+                ["/formpengeluaranbarang", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pengeluaran Barang",() => <Pengeluaranpemilik/>],
+                ["/formpemesanan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pemesanan Barang",() => <Formpesanan/>],
+                ["/formpengembalian", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pengembalian Barang",() => <Formpengembalian/>],
+                ["/formpenambahan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Penambahan Stok Barang",() => <Formpenambahan/>],
+                ["/daftarbarangkeluar", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Barang Keluar",() => <Daftarbarang/>],
+                ["/daftarpengembalianbarang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pengembalian Barang",() => <Daftarpengembalian/>],
+                ["/daftarbarangmasuk", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Barang Masuk",() => <Daftarmasuk/>],
+
                 [
                     "Informasi Gudang ",
                     [
@@ -65,10 +84,24 @@ class Main extends Component {
                     ],
                     "https://img.icons8.com/office/30/000000/cloud.png"
                 ],
+                [
+                    "Pembatalan Permintaan ",
+                    [
+                        ["/pembatalanpesanan", "https://img.icons8.com/office/30/000000/cloud.png", "Pembatalan Pesanan",() => <DaftarPembatalan/>],
+                        ["/formpembatalan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Pembatalan Barang",() => <Formpembatalan/>],
+                    ],
+                    "https://img.icons8.com/office/30/000000/cloud.png"
+                ],
+
+                [
+                    "Managemen Pengguna ",
+                    [
+                        ["/tambahpenggunabaru", "https://img.icons8.com/office/30/000000/cloud.png", "Tambah Pengguna Baru",() => <Penggunabaru/>],
+                        ["/ubahhapusdata", "https://img.icons8.com/office/30/000000/cloud.png", "Ubah Hapus Data Pengguna",() => <Ubahdata/>],
+                    ],
+                    "https://img.icons8.com/office/30/000000/cloud.png"
+                ],
                 
-                ["/tambahpenggunabaru", "https://img.icons8.com/office/30/000000/cloud.png", "Tambah Pengguna Baru",() => <Penggunabaru/>],
-                ["/ubahhapusdata", "https://img.icons8.com/office/30/000000/cloud.png", "Ubah Hapus Data Pengguna",() => <Ubahdata/>],
-                ["/daftarpermintaanbarang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Permintaan Barang",() => <Daftarpermintaan/>]
                 
             ],
             //Kalau udah ditambah, reload webnya, klik menu item yg udh ditambah

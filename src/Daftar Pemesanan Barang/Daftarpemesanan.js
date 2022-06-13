@@ -34,7 +34,7 @@ class DaftarPemesanan extends Component {
                <div className="w-50">
                <div className="container-input">
                         <span>
-                            <input className="input-id" placeholder="ID Permintaan"></input>
+                            <input className="input-id" placeholder="ID Permintaan Pemilik"></input>
                             <FaSearch className="icon1"/>
                             <AiOutlineSortAscending className="icon2"/>
                         </span>  
@@ -90,6 +90,13 @@ class DaftarPemesanan extends Component {
                         </tr>
                         </table>
                     </div>
+                    </div>
+                    <div className="container-input">
+                        <span>
+                            <input className="input-id" placeholder="Cari Barang Berdasarkan ID"></input>
+                            <FaSearch className="icon1"/>
+                            <AiOutlineSortAscending className="icon2"/>
+                        </span>  
                     </div>
                     <div className="container-input">
                         <span >Daftar Barang Dari  Permintaan</span>

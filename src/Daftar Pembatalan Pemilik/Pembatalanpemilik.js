@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { motion } from 'framer-motion'
-import './Daftarpermintaan.css'
+import './Pembatalanpemilik.css'
 import {FaSearch} from 'react-icons/fa'
 import {AiOutlineSortAscending} from 'react-icons/ai'
 
 
 //Ubah nama class dengan nama file js. Jangan buat nama class yg sama dgn yg udh ada.
-class Daftarpermintaan extends Component {
+class Pembatalanpemilik extends Component {
     constructor(props){
         super();
         //... (tambah sesuai kebutuhan)
@@ -30,11 +30,11 @@ class Daftarpermintaan extends Component {
                 variants={this.props.transitionVar}
                 className='center wrapper-container '
             >
-               <h1 className="bold">Daftar Permintaan Barang Ke Gudang</h1>
+               <h1 className="bold">Daftar Pembatalan Permintaan</h1>
                <div className="w-50">
                <div className="container-input">
                         <span>
-                            <input className="input-id" placeholder="ID Pemesanan Barang"></input>
+                            <input className="input-id" placeholder="ID Pembatalan Permintaan"></input>
                             <FaSearch className="icon1"/>
                             <AiOutlineSortAscending className="icon2"/>
                         </span>  
@@ -160,4 +160,4 @@ class Daftarpermintaan extends Component {
 }
 
 //Jangan lupa diexport classnya !!
-export default Daftarpermintaan;
+export default Pembatalanpemilik;

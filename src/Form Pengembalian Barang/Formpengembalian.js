@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { motion } from 'framer-motion'
-import './Daftarpermintaan.css'
-import {FaSearch} from 'react-icons/fa'
-import {AiOutlineSortAscending} from 'react-icons/ai'
-
+import './Formpengembalian.css'
 
 //Ubah nama class dengan nama file js. Jangan buat nama class yg sama dgn yg udh ada.
-class Daftarpermintaan extends Component {
+class Formpengembalian extends Component {
     constructor(props){
         super();
         //... (tambah sesuai kebutuhan)
@@ -30,19 +27,24 @@ class Daftarpermintaan extends Component {
                 variants={this.props.transitionVar}
                 className='center wrapper-container '
             >
-               <h1 className="bold">Daftar Permintaan Barang Ke Gudang</h1>
+               <h1 className="bold">Form Pengembalian Barang</h1>
                <div className="w-50">
-               <div className="container-input">
-                        <span>
-                            <input className="input-id" placeholder="ID Pemesanan Barang"></input>
-                            <FaSearch className="icon1"/>
-                            <AiOutlineSortAscending className="icon2"/>
-                        </span>  
+
+                    <div className="container-input">
+                        <span className="text4">ID Pengembalian Barang</span>
+                        <input className="" placeholder="ID (Readonly)"></input>
                     </div>
 
                     <div className="container-input">
-                        <span >Daftar Permintaan</span>
-                        <div className="container-input">
+                        <span className="text4" >ID Pemesanan Barang</span>
+                            <select className="select" >
+                                <option value="ID" >ID</option>
+                                <option value="ID">ID</option>
+                            </select>
+                    </div>
+
+                    <div className="container-input">
+                        <span className="text4">Detail Permintaan Barang</span>
                         <table  style={{width:"100%", border:"1px solid #fff" ,color:"white"}}>
                         <tr>
                             <th>
@@ -90,17 +92,8 @@ class Daftarpermintaan extends Component {
                         </tr>
                         </table>
                     </div>
-                    </div>
+
                     <div className="container-input">
-                        <span>
-                            <input className="input-id" placeholder="Cari Barang Berdasarkan ID"></input>
-                            <FaSearch className="icon1"/>
-                            <AiOutlineSortAscending className="icon2"/>
-                        </span>  
-                    </div>
-                    <div className="container-input">
-                        <span >Daftar Barang Dari  Permintaan</span>
-                        <div className="container-input">
                         <table  style={{width:"100%", border:"1px solid #fff" ,color:"white"}}>
                         <tr>
                             <th>
@@ -148,9 +141,10 @@ class Daftarpermintaan extends Component {
                         </tr>
                         </table>
                     </div>
-                    </div>
 
-                    
+                    <div className="text-right ">
+                        <button className="bold1">Kirim Form</button>
+                    </div>
                 </div>  
 
             </motion.div>
@@ -160,4 +154,4 @@ class Daftarpermintaan extends Component {
 }
 
 //Jangan lupa diexport classnya !!
-export default Daftarpermintaan;
+export default Formpengembalian;

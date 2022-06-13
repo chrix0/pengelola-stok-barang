@@ -39,7 +39,7 @@ class Formpembatalan extends Component {
 
                     <div className="container-input">
                         <span className="text4">Tanggal Pemesanan</span>
-                        <input className="input-id" placeholder="Tabel detail pesanan"></input>
+                        <input className="" placeholder="Tabel detail pesanan"></input>
                     </div>
 
                     <div className="container-input">

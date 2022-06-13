@@ -143,4 +143,5 @@ body {
 
 .dropdown-list {
   display: none;
+  list-style-type: none;
 }

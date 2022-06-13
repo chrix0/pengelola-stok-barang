@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { motion } from 'framer-motion'
-import './Daftarpermintaan.css'
+import './Daftarpengembalian.css'
 import {FaSearch} from 'react-icons/fa'
 import {AiOutlineSortAscending} from 'react-icons/ai'
 
 
 //Ubah nama class dengan nama file js. Jangan buat nama class yg sama dgn yg udh ada.
-class Daftarpermintaan extends Component {
+class Daftarpengembalian extends Component {
     constructor(props){
         super();
         //... (tambah sesuai kebutuhan)
@@ -30,18 +30,18 @@ class Daftarpermintaan extends Component {
                 variants={this.props.transitionVar}
                 className='center wrapper-container '
             >
-               <h1 className="bold">Daftar Permintaan Barang Ke Gudang</h1>
+               <h1 className="bold">Daftar Pengembalian Barang</h1>
                <div className="w-50">
                <div className="container-input">
                         <span>
-                            <input className="input-id" placeholder="ID Pemesanan Barang"></input>
+                            <input className="input-id" placeholder="ID Pengembalian Barang"></input>
                             <FaSearch className="icon1"/>
                             <AiOutlineSortAscending className="icon2"/>
                         </span>  
                     </div>
 
                     <div className="container-input">
-                        <span >Daftar Permintaan</span>
+                        <span >Daftar Permintaan Pengembalian Barang</span>
                         <div className="container-input">
                         <table  style={{width:"100%", border:"1px solid #fff" ,color:"white"}}>
                         <tr>
@@ -99,7 +99,7 @@ class Daftarpermintaan extends Component {
                         </span>  
                     </div>
                     <div className="container-input">
-                        <span >Daftar Barang Dari  Permintaan</span>
+                        <span >Daftar Barang Yang akan Dikembalikan </span>
                         <div className="container-input">
                         <table  style={{width:"100%", border:"1px solid #fff" ,color:"white"}}>
                         <tr>
@@ -160,4 +160,4 @@ class Daftarpermintaan extends Component {
 }
 
 //Jangan lupa diexport classnya !!
-export default Daftarpermintaan;
+export default Daftarpengembalian;

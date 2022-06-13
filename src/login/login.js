@@ -32,11 +32,11 @@ class Login extends Component {
                <div className="w-50">
                     <div className="container-input">
                         <span className="text4">ID Karyawan</span>
-                        <input className="input-id" placeholder="ID Karyawan"></input>
+                        <input className="" placeholder="ID Karyawan"></input>
                     </div>
                     <div className="container-input">
                         <span className="text4">Password</span>
-                        <input className="input-id" placeholder="Password"></input>
+                        <input  type="password" className=""   placeholder="Password"></input>   
                     </div>
                     <div className="text-right ">
                             Lupa Password?
