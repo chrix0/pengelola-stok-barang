@@ -44,7 +44,7 @@ class Formpengiriman extends Component {
 
                     <div className="container-input">
                         <span className="text4" >ID</span>
-                            <select className="select" >
+                            <select className="select2" >
                                 <option value="ID" >ID</option>
                                 <option value="ID">ID</option>
                             </select>

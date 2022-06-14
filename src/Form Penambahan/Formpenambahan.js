@@ -37,9 +37,9 @@ class Formpenambahan extends Component {
 
                     <div className="container-input">
                         <span className="text4" >ID Pemesanan Barang (supplier)</span>
-                            <select className="select" >
+                            <select className="" >
                                 <option value="ID" >ID</option>
-                                <option value="ID">ID</option>
+                                <option value="ID">ID2</option>
                             </select>
                     </div>
 

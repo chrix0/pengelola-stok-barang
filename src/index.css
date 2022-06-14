@@ -1,3 +1,6 @@
+@tailwind components;
+@tailwind utilities;
+
 .whitetext {
   color: white;
   font-size: 20px;

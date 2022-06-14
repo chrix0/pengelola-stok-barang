@@ -34,6 +34,7 @@ import Formpenambahan from "./Form Penambahan/Formpenambahan";
 import Daftarbarang from "./Daftar Barang Keluar/Daftarbarang";
 import Daftarmasuk from "./Daftar Barang Masuk/Daftarmasuk";
 import Daftarpengembalian from "./Daftar Pengembalian Barang/Daftarpengembalian";
+import Bantuanpengguna from "./Bantuan Pengguna/Bantuanpengguna";
 
 
 class Main extends Component {
@@ -66,7 +67,12 @@ class Main extends Component {
                 ["/formpenambahan", "https://img.icons8.com/office/30/000000/cloud.png", "Form Penambahan Stok Barang",() => <Formpenambahan/>],
                 ["/daftarbarangkeluar", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Barang Keluar",() => <Daftarbarang/>],
                 ["/daftarpengembalianbarang", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Pengembalian Barang",() => <Daftarpengembalian/>],
-                ["/daftarbarangmasuk", "https://img.icons8.com/office/30/000000/cloud.png", "Daftar Barang Masuk",() => <Daftarmasuk/>],
+                ["/bantuanpengguna", "https://img.icons8.com/office/30/000000/cloud.png", "bantuan pengguna",() => <Bantuanpengguna/>],
+                ["/daftargudang", "https://img.icons8.com/office/30/000000/cloud.png", "daftar gudang",() => <DaftarGudang/>],
+                ["/daftarpermintaan", "https://img.icons8.com/office/30/000000/cloud.png", "daftar permintaan",() => <DaftarPermintaan/>],
+                ["/daftarmasuk", "https://img.icons8.com/office/30/000000/cloud.png", "daftar masuk",() => <Daftarmasuk/>],
+
+
 
                 [
                     "Informasi Gudang ",

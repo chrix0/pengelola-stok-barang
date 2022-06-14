@@ -137,11 +137,11 @@ body {
   }
 }
 
-.dropdown:hover .dropdown-list {
+.dropdown2:hover .dropdown2-list {
   display: block;
 }
 
-.dropdown-list {
+.dropdown2-list {
   display: none;
   list-style-type: none;
 }

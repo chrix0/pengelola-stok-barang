@@ -37,7 +37,7 @@ class Lupapassword extends Component {
                     <div className="container-input">
                         <span className="text4">OTP</span>
                         <span>
-                            <input className="input" placeholder="Nomor OTP"></input>
+                            <input className="input2" placeholder="Nomor OTP"></input>
                             <button className="bold5">Kirim OTP Ke nomor Telepon Terkait</button>
                         </span>
                     </div>
