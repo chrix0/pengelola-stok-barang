@@ -30,7 +30,7 @@ class Pemilikinformasi extends Component {
                 variants={this.props.transitionVar}
                 className='center wrapper-container '
             >
-               <h1 className="bold">Informasi Barang</h1>
+               <h1 className="bold">Daftar Barang</h1>
                <div className="w-50">
                <div className="container-input">
                         <span>
